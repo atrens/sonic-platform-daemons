@@ -1,29 +1,20 @@
 from setuptools import setup
 
 setup(
-    name='sonic-psud',
+    name='sonic-pcied',
     version='1.0',
-    description='PSU daemon for SONiC',
+    description='PCIe check daemon for SONiC',
     license='Apache 2.0',
     author='SONiC Team',
     author_email='linuxnetdev@microsoft.com',
     url='https://github.com/Azure/sonic-platform-daemons',
-    maintainer='Kevin Wang',
-    maintainer_email='kevinw@mellanox.com',
-    packages=[
-        'tests'
-    ],
+    maintainer='Sujin Kang',
+    maintainer_email='sujkang@microsoft.com',
     scripts=[
-        'scripts/psud',
+        'scripts/pcied',
     ],
     setup_requires= [
-        'pytest-runner',
         'wheel'
-    ],
-    tests_require = [
-        'pytest',
-        'mock>=2.0.0',
-        'pytest-cov'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -37,6 +28,5 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: System :: Hardware',
     ],
-    keywords='sonic SONiC psu PSU daemon psud PSUD',
-    test_suite='setup.get_test_suite'
+    keywords='sonic SONiC PCIe pcie PCIED pcied',
 )
